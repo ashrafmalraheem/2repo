@@ -9,13 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file <Stats.C> 
+ * @brief <Array Statistics >
  *
- * <Add Extended Description Here>
+ * This program will take an array of char and make statistics on it: it calculate the mean, median, maximum and minimum of that array. It also sort that array in descending order and could print the array in 4*10 matrix. 
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author <Ashraf Abubaker >
+ * @date <11 Oct 2017 >
  *
  */
 
