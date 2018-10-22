@@ -50,7 +50,7 @@ print_statistics(test,SIZE);
 
 char find_mean(unsigned char* array,unsigned int length){
 	long long int sum=0;
-	for(int i=0;i<length;){
+	for(unsigned int i=0;i<length;){
 		sum+=(long int)array[i];
 		++i;
 	}
@@ -63,7 +63,7 @@ void swap(unsigned char* variable1,unsigned char* variable2){
 	*variable1 = temp;
 	}
 long int find_minimum(unsigned char* array, unsigned int length){
-	int i=1;
+	unsigned int i=1;
 	long int mini=array[0];
 	for(;i<length;i++){
 		if(mini>(long int)array[i]){
@@ -73,7 +73,7 @@ long int find_minimum(unsigned char* array, unsigned int length){
 	return mini;
      }
 long int find_maximum(unsigned char* array, unsigned int length){
-	int i=1;
+	unsigned int i=1;
         long int max=array[0];
         for(;i<length;i++){
 		if(max<(long int)array[i]){
@@ -83,10 +83,10 @@ long int find_maximum(unsigned char* array, unsigned int length){
 	return max;
      }
 			       
-void sort_array(unsigned char* array, int length){
-	int i=0;
+void sort_array(unsigned char* array, unsigned int length){
+	unsigned int i=0;
 	for(i=0;i<length;i++){
-		for(int j=0;j<length;j++){
+		for(unsigned int j=0;j<length;j++){
 			if(array[j]<array[j+1]){
 				swap(array+j,array+j+1);
 			}
@@ -96,7 +96,7 @@ void sort_array(unsigned char* array, int length){
      }
 void print_array(unsigned char* array, unsigned int length){
 	printf("\n");
-	for(int i=0;i<length;i++){
+	for(unsigned int i=0;i<length;i++){
 		if((i%4)==0){
 			printf("\n");
 		}
@@ -113,9 +113,9 @@ char find_median(unsigned char* array,unsigned int length){
 	return array[length];
      }
 void print_statistics(unsigned char* array,unsigned int length){
-	printf("\n******************* The Statistics *************** \n The mean is : %d",find_mean(array,SIZE));
-	printf("\n The max is : %ld",find_maximum(array,SIZE));
-	printf("\n The Mini is: %ld",find_minimum(array,SIZE));
-	printf("\n The median is: %d\n",find_median(array,SIZE));
+	printf("\n******************* The Statistics *************** \n The mean is : %d",find_mean(array,length));
+	printf("\n The max is : %ld",find_maximum(array,length));
+	printf("\n The Mini is: %ld",find_minimum(array,length));
+	printf("\n The median is: %d\n",find_median(array,length));
 
      }	
