@@ -66,8 +66,9 @@ long int find_minimum(unsigned char* array, unsigned int length){
 	int i=1;
 	long int mini=array[0];
 	for(;i<length;i++){
-		if(mini>(long int)array[i])
-		mini=(long int)array[i];
+		if(mini>(long int)array[i]){
+		  mini=(long int)array[i];
+		}
 	}
 	return mini;
      }
@@ -75,25 +76,30 @@ long int find_maximum(unsigned char* array, unsigned int length){
 	int i=1;
         long int max=array[0];
         for(;i<length;i++){
-		if(max<(long int)array[i])
-			max=(long int)array[i];
+		if(max<(long int)array[i]){
+		  max=(long int)array[i];
+		}
 	}
 	return max;
      }
 			       
 void sort_array(unsigned char* array, int length){
 	int i=0;
-	for(i=0;i<length;i++)
-		for(int j=0;j<length;j++)
-			if(array[j]<array[j+1])
+	for(i=0;i<length;i++){
+		for(int j=0;j<length;j++){
+			if(array[j]<array[j+1]){
 				swap(array+j,array+j+1);
+			}
+		}
+	}
 	
      }
 void print_array(unsigned char* array, unsigned int length){
 	printf("\n");
 	for(int i=0;i<length;i++){
-		if((i%4)==0)
+		if((i%4)==0){
 			printf("\n");
+		}
 		printf("	%d",array[i]);
 	}
 	printf("\n");
