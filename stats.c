@@ -98,7 +98,7 @@ long int find_maximum(unsigned char* array, unsigned int length){
 void sort_array(unsigned char* array, unsigned int length){
 	if(array == NULL){
 		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
-		return 0;
+		return;
 	}
 	unsigned int i=0;
 	for(i=0;i<length;i++){
@@ -113,7 +113,7 @@ void sort_array(unsigned char* array, unsigned int length){
 void print_array(unsigned char* array, unsigned int length){
 	if(array == NULL){
 		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
-		return 0;
+		return;
 	}
 	printf("\n");
 	for(unsigned int i=0;i<length;i++){
@@ -139,7 +139,7 @@ char find_median(unsigned char* array,unsigned int length){
 void print_statistics(unsigned char* array,unsigned int length){
 	if(array == NULL){
 		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
-		return 0;
+		return;
 	}
 	printf("\n******************* The Statistics *************** \n The mean is : %d",find_mean(array,length));
 	printf("\n The max is : %ld",find_maximum(array,length));
