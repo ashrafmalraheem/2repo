@@ -42,7 +42,7 @@ print_array(test,SIZE);
 sort_array(test,SIZE);
 printf("\n**************   Sorted Array **************\n");
 print_array(test,SIZE);
-print_statistics(test,SIZE);
+print_statistics(test,-2);
 return 0;
 }
 
@@ -52,6 +52,9 @@ char find_mean(unsigned char* array,unsigned int length){
 	if(array == NULL){
 		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
 		return 0;
+	}
+	if (length <1){
+		length = 1;
 	}
 	long long int sum=0;
 	for(unsigned int i=0;i<length;){
@@ -71,6 +74,9 @@ long int find_minimum(unsigned char* array, unsigned int length){
 		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
 		return 0;
 	}
+	if (length <1){
+		length = 1;
+	}
 	unsigned int i=1;
 	long int mini=array[0];
 	for(;i<length;i++){
@@ -84,6 +90,9 @@ long int find_maximum(unsigned char* array, unsigned int length){
 	if(array == NULL){
 		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
 		return 0;
+	}
+	if (length <1){
+		length = 1;
 	}
 	unsigned int i=1;
         long int max=array[0];
@@ -100,6 +109,9 @@ void sort_array(unsigned char* array, unsigned int length){
 		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
 		return;
 	}
+	if (length <1){
+		length = 1;
+	}
 	unsigned int i=0;
 	for(i=0;i<length;i++){
 		for(unsigned int j=0;j<length;j++){
@@ -115,6 +127,9 @@ void print_array(unsigned char* array, unsigned int length){
 		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
 		return;
 	}
+	if (length <1){
+		length = 1;
+	}
 	printf("\n");
 	for(unsigned int i=0;i<length;i++){
 		if((i%4)==0){
@@ -129,6 +144,9 @@ char find_median(unsigned char* array,unsigned int length){
 		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
 		return 0;
 	}
+	if (length <1){
+		length = 1;
+	}
 	sort_array(array,length);
 	if((length%2)==0){
 		printf("\n There is two medians %d , %d",array[length/2-1],array[length/2]);
@@ -140,6 +158,9 @@ void print_statistics(unsigned char* array,unsigned int length){
 	if(array == NULL){
 		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
 		return;
+	}
+	if (length <1){                   // If the length is not valid make it one
+		length = 1; 
 	}
 	printf("\n******************* The Statistics *************** \n The mean is : %d",find_mean(array,length));
 	printf("\n The max is : %ld",find_maximum(array,length));
