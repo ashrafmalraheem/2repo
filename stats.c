@@ -49,6 +49,10 @@ return 0;
 /* Add other Implementation File Code Here */
 
 char find_mean(unsigned char* array,unsigned int length){
+	if(array == NULL){
+		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
+		return;
+	}
 	long long int sum=0;
 	for(unsigned int i=0;i<length;){
 		sum+=(long int)array[i];
@@ -63,6 +67,10 @@ void swap(unsigned char* variable1,unsigned char* variable2){
 	*variable1 = temp;
 	}
 long int find_minimum(unsigned char* array, unsigned int length){
+	if(array == NULL){
+		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
+		return;
+	}
 	unsigned int i=1;
 	long int mini=array[0];
 	for(;i<length;i++){
@@ -73,6 +81,10 @@ long int find_minimum(unsigned char* array, unsigned int length){
 	return mini;
      }
 long int find_maximum(unsigned char* array, unsigned int length){
+	if(array == NULL){
+		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
+		return;
+	}
 	unsigned int i=1;
         long int max=array[0];
         for(;i<length;i++){
@@ -84,6 +96,10 @@ long int find_maximum(unsigned char* array, unsigned int length){
      }
 			       
 void sort_array(unsigned char* array, unsigned int length){
+	if(array == NULL){
+		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
+		return;
+	}
 	unsigned int i=0;
 	for(i=0;i<length;i++){
 		for(unsigned int j=0;j<length;j++){
@@ -95,6 +111,10 @@ void sort_array(unsigned char* array, unsigned int length){
 	
      }
 void print_array(unsigned char* array, unsigned int length){
+	if(array == NULL){
+		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
+		return;
+	}
 	printf("\n");
 	for(unsigned int i=0;i<length;i++){
 		if((i%4)==0){
@@ -105,6 +125,10 @@ void print_array(unsigned char* array, unsigned int length){
 	printf("\n");
      }
 char find_median(unsigned char* array,unsigned int length){
+	if(array == NULL){
+		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
+		return;
+	}
 	sort_array(array,length);
 	if((length%2)==0){
 		printf("\n There is two medians %d , %d",array[length/2-1],array[length/2]);
@@ -113,6 +137,10 @@ char find_median(unsigned char* array,unsigned int length){
 	return array[length];
      }
 void print_statistics(unsigned char* array,unsigned int length){
+	if(array == NULL){
+		printf("\n Invalid Pointer"); // If the pointer points to null, print on the screen and exit
+		return;
+	}
 	printf("\n******************* The Statistics *************** \n The mean is : %d",find_mean(array,length));
 	printf("\n The max is : %ld",find_maximum(array,length));
 	printf("\n The Mini is: %ld",find_minimum(array,length));
