@@ -106,7 +106,7 @@ long int find_maximum(unsigned char* array, unsigned int length);
  * @param <pointer to array>
  * @return <It don't return any thing>
  * */
-void sort_array(unsigned char* array,int length);
+void sort_array(unsigned char* array,int unsigned length);
 
 /*swap*/
 
