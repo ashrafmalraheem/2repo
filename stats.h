@@ -45,7 +45,7 @@
  * @param array is the pointer to selected array
  * @return It don't return any thing, it only display the statistics
  * */
-void print_statistics(unsigned char* array, unsigned int length);
+void print_statistics(unsigned char* array, signed long int length);
 
 
 /* print_array */ 
@@ -57,7 +57,7 @@ void print_statistics(unsigned char* array, unsigned int length);
  * @param length is the length of data to be printed
  * @return <It don't return any thing>
  */ 
-void print_array(unsigned char* array, unsigned int length);
+void print_array(unsigned char* array, signed long int length);
 
 /* find_median */     
 /**
@@ -68,7 +68,7 @@ void print_array(unsigned char* array, unsigned int length);
  * @param <data length>
  * @return <It returns the median>
  * */
-char find_median(unsigned char* array, unsigned int length);
+char find_median(unsigned char* array, signed long int length);
 
 /* find_mean */
 /**
@@ -79,7 +79,7 @@ char find_median(unsigned char* array, unsigned int length);
  * @param <data length>
  * @return <It returns the mean as a float number>
  * */
-char find_mean(unsigned char* array, unsigned int length);
+char find_mean(unsigned char* array, signed long int length);
 
 /* find_minimum */
 /**
@@ -88,7 +88,7 @@ char find_mean(unsigned char* array, unsigned int length);
  * @param <data length>
  * @return <It returns the minimum>
  **/
-long int find_minimum(unsigned char* array, unsigned int length);
+long int find_minimum(unsigned char* array, signed long int length);
 
 /* find_maximum */
 /**
@@ -97,7 +97,7 @@ long int find_minimum(unsigned char* array, unsigned int length);
  * @param <data length>
  * @return <It returns the maximum>
  **/
-long int find_maximum(unsigned char* array, unsigned int length);
+long int find_maximum(unsigned char* array, signed long int length);
 
 
 /*sort_array */
@@ -106,16 +106,21 @@ long int find_maximum(unsigned char* array, unsigned int length);
  * @param <pointer to array>
  * @return <It don't return any thing>
  * */
-void sort_array(unsigned char* array,int unsigned length);
+void sort_array(unsigned char* array,signed long int length);
 
 /*swap*/
 
-/* @breif < it took two variables and swap its location in an array  >
+/* @breif <it took two variables and swap its location in an array if they are not NULL>
  * @param <pointer to the first variable>
  * @param <pointer to the seconde variable>
  * @return <It don't return any thing>
  * */
 void swap(unsigned char* variable1,unsigned char* variable2);
-
-
+/* check_validity */
+/* @brief < it takes the array pointer and length to check the validity of the two variables. If valid it returns 1 if not it returns 0>
+* @param <pointer to array>
+* @param <array length>
+* @return <the validity result either 0 or 1>
+* */
+int check_validity(unsigned char* variable1 , signed long int variable2);
 #endif /* __STATS_H__ */
